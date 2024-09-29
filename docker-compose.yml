@@ -6,7 +6,7 @@ services:
       io.balena.build.description: 'Mainhelloworld'
       io.balena.build.git-url: "https://github.com/barneymc/balena-nodejs-hello-world"
     environment:
-      - BUILD_DESCRIPTION="Mainhelloworld"
+      - BUILD_DESCRIPTION="Mainhelloworld 8"
       - GIT_URL="https://github.com/barneymc/balena-nodejs-hello-world"
     build: .
     ports:
