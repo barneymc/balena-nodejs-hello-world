@@ -3,7 +3,11 @@ version: "2"
 services:
   balena-hello-world:
     labels:
-      - io.balena.build.description= "Main hello world -https://github.com/barneymc/balena-nodejs-hello-world"
+      io.balena.build.description: 'Mainhelloworld'
+      io.balena.build.git-url: "https://github.com/barneymc/balena-nodejs-hello-world"
+    environment:
+      - BUILD_DESCRIPTION="Mainhelloworld"
+      - GIT_URL="https://github.com/barneymc/balena-nodejs-hello-world"
     build: .
     ports:
       - "80:80"

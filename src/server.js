@@ -4,6 +4,7 @@ const favicon = require('serve-favicon')
 const app = express()
 const PORT = 80
 
+
 app.use(favicon(join(__dirname, '..', 'views', 'public', 'favicon.ico')))
 app.set('views', join(__dirname, '..', 'views', 'public'))
 app.set('view engine', 'html')
@@ -21,4 +22,8 @@ app.get('/', function (req, res) {
 // start a server on port 80 and log its start to our console
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`)
+  console.log("Service started with the following details:");
+  console.log("Git Repository URL: " + process.env.GIT_URL);
+  console.log("Build Description: " + process.env.BUILD_DESCRIPTION);
+
 })
