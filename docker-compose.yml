@@ -2,6 +2,8 @@ version: "2"
 
 services:
   balena-hello-world:
+    labels:
+      - io.balena.build.description= "Main hello world -https://github.com/barneymc/balena-nodejs-hello-world"
     build: .
     ports:
       - "80:80"
